@@ -18,7 +18,7 @@ while True:
         birthYear, birthMonth, birthDay = map(int, userInputBirthDay.split('-'))
         formatedBirthDate = datetime.date(birthYear, birthMonth, birthDay)
                         
-        reader = pd.read_csv('LifeExpectancy.csv', header = 2)
+        reader = pd.read_csv('lifeExpectancy.csv', header = 2)
 
         returnedLifeSpan = (reader[reader["Country Name"] == userInputBirthCountry][str(birthYear)])
 
